@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marius Hairstyle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #000;
+            color: #FFF;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow-x: hidden;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+        .logo {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4.5rem;
+            color: #FFF;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            animation: glow 2s infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #FFF, 0 0 20px #FFF, 0 0 30px #FFD700, 0 0 40px #FFD700; }
+            to { text-shadow: 0 0 20px #FFF, 0 0 30px #FFD700, 0 0 40px #FFD700, 0 0 50px #FFD700; }
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #FFF;
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .price-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .price-list div {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #FFF;
+        }
+        .price-list div:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 8px rgba(255, 215, 0, 0.5);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(17, 17, 17, 0.8);
+            color: #FFF;
+            font-size: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animated {
+            animation: fadeIn 2s ease-in-out;
+        }
+        .background-icons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            overflow: hidden;
+            pointer-events: none; /* Permite scroll fără interferențe */
+        }
+        .background-icons svg {
+            position: absolute;
+            opacity: 0.3;
+            fill: #FFD700;
+            animation: float 10s infinite ease-in-out;
+            filter: drop-shadow(0 0 5px #FFD700);
+            transition: opacity 0.3s ease;
+        }
+        .background-icons svg:hover {
+            opacity: 0.1;
+        }
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+        .contact-info {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .contact-info a {
+            color: #FFD700;
+            text-decoration: none;
+            font-size: 1.3rem;
+            margin: 0 10px;
+            transition: opacity 0.3s ease;
+            font-family: 'Cinzel', serif;
+        }
+        .contact-info a:hover {
+            opacity: 0.8;
+        }
+        .contact-info .phone {
+            font-size: 1.3rem;
+            color: #FFD700;
+            margin-top: 10px;
+            font-family: 'Cinzel', serif;
+        }
+        .book-now {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #FFD700;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+        .book-now:hover {
+            background-color: #e6b800;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 3rem;
+            }
+            h1, h2 {
+                font-size: 2rem;
+            }
+            .price-list {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-icons">
+        <!-- Scissors -->
+        <svg aria-hidden="true" role="img" viewBox="0 0 24 24"><path d="M20.5 3.5L18 6l2 2-2.5 2.5L13 7l-6 6 2 2-3 3-2-2 3-3 2 2 6-6-3.5-3.5L16 4l2-2 2.5 1.5zM6 18l-2 2 2 2 2-2-2-2z"/></svg>
+        <!-- Hairbrush -->
+        <svg aria-hidden="true" role="img" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.39-.39-1.04-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83zM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+        <!-- Hair Dryer -->
+        <svg aria-hidden="true" role="img" viewBox="0 0 24 24"><path d="M12 3c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2s2-.9 2-2V5c0-1.1-.9-2-2-2zm0 14c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-8-4c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2s-.9-2-2-2H4v-2c0-1.1-.9-2-2-2zm16 0c-1.1 0-2 .9-2 2v2h-2c-1.1 0-2 .9-2 2s.9 2 2 2h2c1.1 0 2-.9 2-2v-2c0-1.1-.9-2-2-2z"/></svg>
+        <!-- Mirror -->
+        <svg aria-hidden="true" role="img" viewBox="0 0 24 24"><path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9zm0-16c-3.86 0-7 3.14-7 7s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm0 12c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
+        <!-- Comb -->
+        <svg aria-hidden="true" role="img" viewBox="0 0 24 24"><path d="M20 3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM4 5h16v14H4V5zm2 2v2h2V7H6zm4 0v2h2V7h-2zm4 0v2h2V7h-2zm4 0v2h2V7h-2zM6 11v2h2v-2H6zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2zM6 15v2h2v-2H6zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2z"/></svg>
+    </div>
+    <header class="animated">
+        <div class="logo">Mario Hairstyle</div>
+    </header>
+    <div class="container">
+        <h2>Price List</h2>
+        <p style="text-align: center; font-size: 1.5rem; color: #FFD700; font-family: 'Cinzel', serif;">Lista de preturi</p>
+        <div class="price-list">
+            <div>Tuns par (scurt) - 40 RON</div>
+            <div>Tuns par (mediu) - 55 RON</div>
+            <div>Tuns par (lung) - 70 RON</div>
+            <div>Coafat par (scurt) - 50 RON</div>
+            <div>Coafat par (mediu) - 65 RON</div>
+            <div>Coafat par (lung) - 80 RON</div>
+            <div>Manopera vopsit par (scurt) - 40 RON</div>
+            <div>Manopera vopsit par (mediu) - 60 RON</div>
+            <div>Manopera vopsit par (lung) - 80 RON</div>
+            <div>Tub vopsea - 40 RON</div>
+            <div>Cupa pudra decoloranta - 30 RON</div>
+            <div>Manopera suvite par (scurt/mediu) - 100 RON</div>
+            <div>Manopera suvite par (lung) - 170 RON</div>
+            <div>Manopera decolorat la radacina - 50 RON</div>
+            <div>Manopera balayage - 200 RON</div>
+            <div>Manopera decolorat tot parul - 160 RON</div>
+            <div>Make-up de zi - 150 RON</div>
+            <div>Make-up de seara - 250 RON</div>
+        </div>
+        <div class="contact-info">
+            <a href="https://www.instagram.com/mario.art.hair" target="_blank">Instagram: mario.art.hair</a>
+            <div class="phone">For appointments: <a href="tel:+40770121909">+40 770 121 909</a></div>
+            <a href="https://wa.me/+40770121909" class="book-now" target="_blank">Book Now</a>
+        </div>
+    </div>
+    <footer>
+        &copy; 2023 Marius Hairstyle. All rights reserved.
+    </footer>
+</body>
+</html>
